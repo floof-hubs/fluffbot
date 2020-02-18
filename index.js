@@ -70,7 +70,7 @@ const command = args.shift().toLowerCase();
         let updEmb = new d.RichEmbed()
         .setColor("#00ff8c")
         .setTitle("FluffyHub")
-        .addField("Change Logs:", "```" + `${args[0]}` + "```")
+        .addField("Change Logs:", "```" + `${args[0].split(" ")}` + "```")
         .setFooter("FluffyHub bot")
         .setTimestamp()
         message.delete()
