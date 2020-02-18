@@ -64,13 +64,14 @@ client.on("message", message => {
         }
     }
 const prefix = "."
-const args = message.content.slice(prefix.length).split(' ');
-const command = args.shift().toLowerCase();
-    if (command === "update"){
+let args = message.content.slice(prefix.length).trim().split(' ');
+let cmd = args.shift().toLowerCase();
+
+    if (cmd === "update"){
         let updEmb = new d.RichEmbed()
         .setColor("#00ff8c")
         .setTitle("FluffyHub")
-        .addField("Change Logs:", "```" + `${args[0].split(" ")}` + "```")
+        .addField("Change Logs:", "```" + `${args[0.].join(" ")}` + "```")
         .setFooter("FluffyHub bot")
         .setTimestamp()
         message.delete()
