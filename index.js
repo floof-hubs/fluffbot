@@ -19,17 +19,17 @@ client.on("guildMemberAdd", member => {
 })
 
 client.on("message", message => {
-    if(message.content === ".fake"){
-        let role = message.member.guild.roles.find(r => r.name === "Not Verified")
-        message.member.addRole(role)
-        let messageEmbed = new d.RichEmbed()
-        .setColor("RANDOM")
-        .setTitle("Welcome!")
-        .setDescription("Welcome To iHax Fan Server!\nPlease Go To https://dylanshub.xyz/FluffyHub/Verify.php?Verification=" + message.member.id + " To Verify!")
-        .setFooter("From FluffyHub")
-        .setTimestamp()
-     message.member.send(messageEmbed)
-    }
+//     if(message.content === ".fake"){
+//         let role = message.member.guild.roles.find(r => r.name === "Not Verified")
+//         message.member.addRole(role)
+//         let messageEmbed = new d.RichEmbed()
+//         .setColor("RANDOM")
+//         .setTitle("Welcome!")
+//         .setDescription("Welcome To iHax Fan Server!\nPlease Go To https://dylanshub.xyz/FluffyHub/Verify.php?Verification=" + message.member.id + " To Verify!")
+//         .setFooter("From FluffyHub")
+//         .setTimestamp()
+//      message.member.send(messageEmbed)
+//     }
     if (message.content.startsWith("verify")) {
         if (!message.author.bot) return;
         let mem = message.mentions.members.first();
@@ -70,7 +70,7 @@ const command = args.shift().toLowerCase();
         let updEmb = new d.RichEmbed()
         .setColor("#00ff8c")
         .setTitle("FluffyHub")
-        .addField("Change Logs:", args[0].join(" "))
+        .addField("Change Logs:", "```" + args[0].join(" ") + "```")
         .setFooter("FluffyHub bot")
         .setTimestamp()
         message.delete()
