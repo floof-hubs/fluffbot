@@ -2,8 +2,8 @@ const d = require("discord.js")
 const client = new d.Client()
 
 client.on("ready", r => {
-    console.log("Loaded")
-    client.user.setActivity("FluffyHub > All", { type: "STREAMING", url: "https://twitch.tv/PewDiePIe"})
+    console.log("Loaded"i
+    client.user.setActivity("FluffyHub > All", { type: "STREAMING", url: "https://twitch.tv/PewDiePie"})
 })
 
 client.on("guildMemberAdd", member => {
@@ -47,7 +47,7 @@ client.on("message", message => {
         let script = new d.RichEmbed()
         .setColor("RANDOM")
         .setTitle("Script")
-        .setDescription('Script: ```lua\nloadstring(game:HttpGet("https://raw.githubusercontent.com/flufl/bignukes/master/FluffyHub.txt",true))()`')
+        .setDescription('Script: ```lua\nloadstring(game:HttpGet("https://raw.githubusercontent.com/flufl/bignukes/master/FluffyHub.txt",true))()```')
         .setFooter("FluffyHub")
         .setTimestamp()
         message.member.send(script)
