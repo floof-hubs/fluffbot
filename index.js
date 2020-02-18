@@ -74,7 +74,8 @@ const command = args.shift().toLowerCase();
         .setFooter("FluffyHub bot")
         .setTimestamp()
         message.delete()
-        message.channel.send("@everyone" + updEmb)
+        message.channel.send("@everyone")
+        message.channel.send(updEmb)
     }
 })
 client.login(process.env.token)
