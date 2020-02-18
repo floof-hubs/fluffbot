@@ -71,7 +71,7 @@ let cmd = args.shift().toLowerCase();
         let updEmb = new d.RichEmbed()
         .setColor("#00ff8c")
         .setTitle("FluffyHub")
-        .addField("Change Logs:", "```" + `${args[0.].join(" ")}` + "```")
+        .addField("Change Logs:", "```" + `${args.join(" ")}` + "```")
         .setFooter("FluffyHub bot")
         .setTimestamp()
         message.delete()
