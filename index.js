@@ -34,6 +34,9 @@ client.on("message", message => {
         if (!message.author.bot) return;
         let mem = message.mentions.members.first();
         mem.addRole(message.guild.roles.find(role => role.name === "Fluffies"))
+        mem.addRole(message.guild.roles.find(role => role.name === "----------------y e s----------------"))
+        mem.addRole(message.guild.roles.find(role => role.name === "----------------o k----------------"))
+        mem.addRole(message.guild.roles.find(role => role.name === "----------------m e h----------------"))
         mem.removeRole(message.guild.roles.find(role => role.name === "Not Verified"))
         let verifiedEMbed = new d.RichEmbed()
         verifiedEMbed.setColor("RANDOM")
