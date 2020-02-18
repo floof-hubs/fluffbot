@@ -63,5 +63,18 @@ client.on("message", message => {
             return message.reply("I found none of your roles in the database.")
         }
     }
+const prefix = "."
+const args = message.content.slice(prefix.length).split(' ');
+const command = args.shift().toLowerCase();
+    if (command === "update"){
+        let updEmb = new d.RichEmbed()
+        .setColor("#00ff8c")
+        .setTitle("FluffyHub")
+        .addField("Change Logs:", args[0].join(" "))
+        .setFooter("FluffyHub bot")
+        .setTimestamp()
+        message.delete()
+        message.channel.send("@everyone" + updEmb)
+    }
 })
 client.login(process.env.token)
