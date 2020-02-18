@@ -2,7 +2,7 @@ const d = require("discord.js")
 const client = new d.Client()
 
 client.on("ready", r => {
-    console.log("Loaded"i
+    console.log("Loaded")
     client.user.setActivity("FluffyHub > All", { type: "STREAMING", url: "https://twitch.tv/PewDiePie"})
 })
 
