@@ -68,6 +68,7 @@ let args = message.content.slice(prefix.length).trim().split(' ');
 let cmd = args.shift().toLowerCase();
 
     if (cmd === "update"){
+        if(!message.member.roles.find("name", "Developer")) return;
         let updEmb = new d.RichEmbed()
         .setColor("#00ff8c")
         .setTitle("FluffyHub")
