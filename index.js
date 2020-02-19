@@ -50,7 +50,7 @@ client.on("message", message => {
         let script = new d.RichEmbed()
         .setColor("RANDOM")
         .setTitle("Script")
-        .setDescription('Script: ```lua\nloadstring(game:HttpGet("https://raw.githubusercontent.com/flufl/bignukes/master/FluffyHub.txt",true))()```')
+        .setDescription('Script: ```lua\nloadstring(game:HttpGet("https://raw.githubusercontent.com/Th3realdylan/FluffyHub/master/bootstrapper.lua",true))()```')
         .setFooter("FluffyHub")
         .setTimestamp()
         message.member.send(script)
