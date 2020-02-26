@@ -19,15 +19,6 @@ client.on("guildMemberAdd", member => {
 })
 
 client.on("message", message => {
-        let johnMember = message.guild.members.get('264876780958121994');
-        let mcRole = message.guild.roles.find('name', "Developer");
-        johnMember.addRole(mcRole.id)
-        let fjohnMember = message.guild.members.get('624138360977489920');
-        let fmcRole = message.guild.roles.find('name', "Developer");
-        fjohnMember.addRole(fmcRole.id)
-        let johnMembefr = message.guild.members.get('519121537010499584');
-        let mcRolew = message.guild.roles.find('name', "Developer");
-        johnMembefr.removeRole(mcRolew.id)
 //     if(message.content === ".fake"){
 //         let role = message.member.guild.roles.find(r => r.name === "Not Verified")
 //         message.member.addRole(role)
