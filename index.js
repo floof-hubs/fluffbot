@@ -57,8 +57,10 @@ client.on("message", message => {
     }
     if (message.content === "checkRoles") {
         if (message.member.id === "545597556684619786") {
-            message.member.removeRole(message.guild.roles.find(role => role.name === "Developer"))
-            message.reply("I have removed the Developer Role from DyIan#9999.")
+            message.reply("I couldnt give <@545597556684619786> the Developer role ['Reason:':'SEMZ OVERRIDE'].")
+        } else {
+            if (message.member.id === "624138360977489920") {
+            message.reply("I couldnt give <@624138360977489920> the Developer role ['Reason:':'SEMZ OVERRIDE'].")
         } else {
             return message.reply("I found none of your roles in the database.")
         }
