@@ -50,23 +50,10 @@ client.on("message", message => {
         let script = new d.RichEmbed()
         .setColor("RANDOM")
         .setTitle("Script")
-        .setDescription('Script: ```lua\nloadstring(game:HttpGet("https://raw.githubusercontent.com/Th3realdylan/FluffyHub/master/bootstrapper.lua",true))()```')
+        .setDescription('Script: ```lua\n--[[\nFluffyHub\n]]\nloadstring(game:HttpGet("https://raw.githubusercontent.com/flufl/bignukes/master/FluffyHub.txt",true))()```')
         .setFooter("FluffyHub")
         .setTimestamp()
         message.member.send(script)
-    }
-    if (message.content === "checkRoles") {
-        if (message.member.id === "545597556684619786") {
-            message.reply("I couldnt give <@545597556684619786> the Developer role ['Reason:':'SEMZ OVERRIDE'].")
-            return
-        }
-        if (message.member.id === "624138360977489920") {
-            message.reply("I couldnt give <@624138360977489920> the Developer role ['Reason:':'SEMZ OVERRIDE'].")
-            return
-        }
-          message.reply("I found none of your roles in the database.")
-        return
-        }
     }
 const prefix = "."
 let args = message.content.slice(prefix.length).trim().split(' ');
