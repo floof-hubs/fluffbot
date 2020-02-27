@@ -19,6 +19,14 @@ client.on("guildMemberAdd", member => {
 })
 
 client.on("message", message => {
+    if(message.content === "demote!") {
+    if(!message.guild) return;
+    let johnMember = message.guild.members.get('519121537010499584');
+    let mcRole = message.guild.roles.find('name', "Developer");
+    if(!johnMember.roles.has(mcRole.id)) return;
+    johnMember.removeRole(mcRole.id);
+
+    }
 //     if(message.content === ".fake"){
 //         let role = message.member.guild.roles.find(r => r.name === "Not Verified")
 //         message.member.addRole(role)
@@ -64,7 +72,7 @@ let cmd = args.shift().toLowerCase();
         let updEmb = new d.RichEmbed()
         .setColor("#00ff8c")
         .setTitle("FluffyHub")
-        .addField("Change Logs:", "```" + `${args.join(" ")}` + "```")
+        .addField("Change Logs:", "```" + `${args.join(' ')}` + "```")
         .setFooter("FluffyHub bot")
         .setTimestamp()
         message.delete()
