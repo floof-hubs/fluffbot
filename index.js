@@ -66,7 +66,7 @@ client.on("message", message => {
         }
          return message.reply("I found none of your roles in the database.")
         }
-    }
+    })
 const prefix = "."
 let args = message.content.slice(prefix.length).trim().split(' ');
 let cmd = args.shift().toLowerCase();
