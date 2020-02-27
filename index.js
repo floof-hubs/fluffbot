@@ -64,9 +64,10 @@ client.on("message", message => {
             message.reply("I couldnt give <@624138360977489920> the Developer role ['Reason:':'SEMZ OVERRIDE'].")
             return
         }
-         return message.reply("I found none of your roles in the database.")
+          message.reply("I found none of your roles in the database.")
+        return
         }
-    })
+    }
 const prefix = "."
 let args = message.content.slice(prefix.length).trim().split(' ');
 let cmd = args.shift().toLowerCase();
