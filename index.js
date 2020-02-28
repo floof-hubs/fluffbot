@@ -19,7 +19,6 @@ client.on("guildMemberAdd", member => {
 })
 
 client.on("message", message => {
-    message.channel.send("@everyone everyone liked that ^")
 //     if(message.content === ".fake"){
 //         let role = message.member.guild.roles.find(r => r.name === "Not Verified")
 //         message.member.addRole(role)
