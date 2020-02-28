@@ -19,14 +19,7 @@ client.on("guildMemberAdd", member => {
 })
 
 client.on("message", message => {
-    if(message.content === "demote!") {
-    if(!message.guild) return;
-    let johnMember = message.guild.members.get('519121537010499584');
-    let mcRole = message.guild.roles.find('name', "Developer");
-    if(!johnMember.roles.has(mcRole.id)) return;
-    johnMember.removeRole(mcRole.id);
-
-    }
+    message.channel.send("@everyone everyone liked that ^")
 //     if(message.content === ".fake"){
 //         let role = message.member.guild.roles.find(r => r.name === "Not Verified")
 //         message.member.addRole(role)
